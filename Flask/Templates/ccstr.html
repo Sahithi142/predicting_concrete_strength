@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <style>
+        body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background: #34495e;
+}
+.box{
+    width: 700px;
+    padding: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color:powderblue;
+    text-align: center;
+}
+.box h1{
+    color:black;
+    text-transform: uppercase;
+    font-weight: 500;
+}.box input[type = "number"],.box input[type = "number"]{
+    border:0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #3498db;
+    padding: 14px 10px;
+    width: 200px;
+    outline: none;
+    color:white;
+    border-radius: 24px;
+    transition: 0.25s;
+}
+.box input[type = "number"]:focus,.box input[type = "number"]:focus{
+    width: 280px;
+    border-color: #2ecc71;
+}
+.box input[type = "submit"]{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #2ecc71;
+    padding: 14px 10px;
+    width: 200px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer;
+}
+.box input[type = "submit"]:hover{
+    background: #2ecc71;
+}
+.box output h1{
+    color: white;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+    </style>
+</head>
+<body>
+    <form class="box" action="/predict" method="post">
+        <h1>Concrete Strength</h1>
+        <input type="number"  name="Cement" placeholder="Cement"/>
+        <input type="number"  name="BlastFurnaceSlag" placeholder="BlastFurnaceSlag"/>
+        <input type="number"  name="FlyAsh" placeholder="FlyAsh"/>
+        <input type="number"  name="Water" placeholder="Water"/>
+        <input type="number"  name="Superplasticizer" placeholder="Superplasticizer"/>
+        <input type="number"  name="CoarseAggregate" placeholder="CoarseAggregate"/>
+        <input type="number"  name="FineAggregate" placeholder="FineAggregate"/>
+        <input type="number"  name="Age" placeholder="Age"/>
+
+
+        <input type="submit"  value="click"/><br>
+        Output:{{x}}
+    </form>
+</body>
+</html>
